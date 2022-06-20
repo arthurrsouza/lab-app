@@ -1,0 +1,13 @@
+<PowerSelectMultiple
+  @searchEnabled={{true}} 
+  @placeholder="Select some names..." 
+  @options={{this.names}}
+  @selected={{this.selectedName}} 
+  @onChange={{fn (mut this.selectedName)}}
+  @beforeOptionsComponent="ui/power-select/before-options"
+  @optionsComponent="ui/power-select/options"
+  @closeOnSelect={{false}}
+  as |name|
+>
+  {{name}}
+</PowerSelectMultiple>
