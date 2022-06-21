@@ -12,9 +12,9 @@ export default class UiPowerSelectMultipleBeforeOptionsComponent extends PowerSe
   toggleAll () {
     const { options, selected } = this.args.select
     if (this.allSelected) {
-      return this.args.select.actions.select(null)
+      this.args.select.actions.select(null)
+    } else {
+      this.args.select.actions.select(this.args.select.options)
     }
-
-    this.args.select.actions.select(this.args.select.options)
   }
 }
