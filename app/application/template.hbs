@@ -1,9 +1,9 @@
 <Ui::PowerSelectMultiple
-  @options={{this.names}}
+  @options={{this.people}}
   @selected={{this.selectedOptions}}
   @placeholder="Select the names"
   @onChange={{fn (mut this.selectedOptions)}}
-  as |name|
+  as |person|
 >
-  {{name}}  
+  {{person.name}}  
 </Ui::PowerSelectMultiple>
