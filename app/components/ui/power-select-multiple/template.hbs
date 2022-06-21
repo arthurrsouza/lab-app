@@ -1,0 +1,13 @@
+<PowerSelectMultiple
+  @searchEnabled={{true}} 
+  @placeholder={{@placeholder}}
+  @options={{@options}}
+  @selected={{@selected}} 
+  @onChange={{@onChange}}
+  @beforeOptionsComponent="ui/power-select-multiple/before-options"
+  @optionsComponent="ui/power-select-multiple/options"
+  @closeOnSelect={{false}}
+  as |option|
+>
+  {{yield option}}
+</PowerSelectMultiple>
