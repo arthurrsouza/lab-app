@@ -4,18 +4,17 @@
   {{will-destroy this.removeHandlers}} 
   ...attributes
 >
-  {{#if @select.loading}}
-    {{#if @loadingMessage}}
-      <li 
-        class="
-          ember-power-select-option 
-          ember-power-select-option--loading-message
-        "
-        role="option"
-      >
-        {{@loadingMessage}}
-      </li>
-    {{/if}}
+
+  {{#if (and @select.loading @loadingMessage)}}
+    <li 
+      class="
+        ember-power-select-option 
+        ember-power-select-option--loading-message
+      "
+      role="option"
+    >
+      {{@loadingMessage}}
+    </li>
   {{/if}}
 
   {{#each @options as |opt index|}}
