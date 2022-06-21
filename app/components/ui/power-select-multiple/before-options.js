@@ -2,7 +2,7 @@
 import PowerSelectBeforeOptionsComponent from '@glimmer/component'
 import { action } from '@ember/object'
 
-export default class UiPowerSelectBeforeOptionsComponent extends PowerSelectBeforeOptionsComponent {
+export default class UiPowerSelectMultipleBeforeOptionsComponent extends PowerSelectBeforeOptionsComponent {
   get allSelected () {
     const { options, selected } = this.args.select
     return selected && selected.length === options.length
